@@ -1,0 +1,93 @@
+<html>
+<head>
+   <title>change picture</title>
+   <script type = "text/javascript">
+
+      function hyperGlitch(){
+        document.getElementById("overlay").src = "0001.gif";
+      }
+
+       function displayNextImage() {
+           x = (x === images.length - 1) ? 0 : x + 1;
+           document.getElementById("glitch").src = images[x];
+           document.getElementById("story").innerHTML = storys[x];
+       }
+
+       function startTimer() {
+
+           setInterval(displayNextImage, 2000);
+       }
+
+       var images = [], x = -1;
+       images[0] = "glitches/glitch1.png";
+       images[1] = "glitches/glitch2.jpg";
+       images[2] = "glitches/glitch3.jpg";
+       images[3] = "glitches/glitch4.jpg";
+       images[4] = "glitches/glitch5.jpg";
+       images[5] = "glitches/glitch6.jpg";
+       images[6] = "glitches/glitch7.jpg";
+       var storys = [], x = -1;
+       storys[0] = "Stupid Van";
+       storys[1] = "#This feeling";
+       storys[2] = "Can't fit, obviously";
+       storys[3] = "Get out of the way";
+       storys[4] = "Another blocked curb";
+       storys[5] = "Road doesn't works";
+       storys[6] = "Had to go around";
+   </script>
+</head>
+
+<style>
+
+  #story
+  {
+    color:white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 100;
+    position: absolute;
+    bottom: 60px;
+    left:200px;
+  }
+   #glitch
+   {
+     position: relative;
+     top: 0;
+     left: 0;
+     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+     filter: grayscale(100%);
+   }
+   #overlay
+   {
+     position: absolute;
+     top: 60px;
+     left: 80px;
+     opacity: 0.9;
+   }
+   .overlay2
+   {
+     position: absolute;
+     top: 60px;
+     left: 80px;
+     opacity: 0.9;
+   }
+
+   .hyperGlitch
+   {
+     background-color: #33ccff;
+     position: absolute;
+     bottom: 60px;
+     left: 80px;
+     opacity: 0.9;
+   }
+ </style>
+
+
+  <body onload = "startTimer()">
+      <img id="glitch" src="glitches/glitch1.png">
+      <img id="overlay" src="0002.gif">
+      <img class="overlay2" src="face.gif">
+      <p id="story">Stupid Van</p>
+      <button class="hyperGlitch" onclick="hyperGlitch()">Please don't push this <b>Hyper Glitch</b> button</button>
+  </body>
+</html>
