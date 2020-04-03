@@ -3,37 +3,44 @@
 
 <style>
 
-   #glitch
+   .glitch
    {
      position: relative;
-     top: 0;
-     left: 0;
-     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-     filter: grayscale(100%);
+     float:left;
+     width:500;
    }
    #overlay
    {
      position: absolute;
      top: 0px;
      left: 150px;
-     opacity: 0.9;
-     width:500;
+     width:300;
    }
    #overlay2
    {
      position: absolute;
      top: 0px;
      left: 150px;
+     width:300;
+   }
+
+   #overlay3
+   {
+     position: absolute;
+     top: -50px;
+     left: 500px;
      opacity: 0.9;
-     width:500;
+     width:300;
    }
 
  </style>
 
 
   <body>
-      <img id="glitch" src="new-glitch.png">
+      <img class="glitch" src="new-glitch.png">
+      <img class="glitch" src="new-glitch.png">
       <img id="overlay" src="sg1.gif">
       <img id="overlay" src="sg2.gif">
+      <img id="overlay3" src="line.gif">
   </body>
 </html>
